@@ -24,7 +24,11 @@ public abstract class HandledScreenMixin extends Screen {
 		super(title);
 	}
 
-	@Inject(method = "onMouseClick", at = @At("HEAD"), cancellable = true)
+	@Inject(
+		method = "onMouseClick(Lnet/minecraft/screen/slot/Slot;IILnet/minecraft/screen/slot/SlotActionType;)V",
+		at = @At("HEAD"),
+		cancellable = true
+	)
 	private void shiftclicktotem$onMouseClick(Slot slot, int slotId, int button, SlotActionType actionType, CallbackInfo ci) {
 		if (actionType != SlotActionType.QUICK_MOVE || slot == null || !slot.hasStack()) {
 			return;
