@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "shiftclicktotem",
+	"version": "${version}",
+	"name": "ShiftClick Totem",
+	"description": "Shift-clicking a Totem of Undying moves it straight to your offhand, as if you pressed your swap-offhand key.",
+	"authors": [
+		"zSouul"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/shiftclicktotem/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.zsouul.shiftclicktotem.ShiftClickTotem"
+		]
+	},
+	"mixins": [
+		"shiftclicktotem.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
